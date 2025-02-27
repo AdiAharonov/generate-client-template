@@ -11,9 +11,6 @@
   "author": "Adi Aharonov",
   "license": "MIT",
   "description": "A CLI tool to generate best-practice Next.js project templates.",
-  "bin": {
-    "generate-client-template": "./index.js"
-  },
   "repository": "https://github.com/AdiAharonov/generate-client-template.git",
   "devDependencies": {
     "@types/fs-extra": "^11.0.4",
@@ -23,5 +20,11 @@
   "dependencies": {
     "fs-extra": "^11.3.0",
     "inquirer": "^12.4.2"
+  },
+  "bin": {
+    "generate-client-template": "./dist/index.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
