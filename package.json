@@ -2,19 +2,25 @@
   "name": "generate-client-template",
   "version": "1.0.0",
   "main": "index.js",
-"scripts": {
-  "start": "node index.js",
-  "test": "echo \"No tests yet\""
-},
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "echo \"No tests yet\""
+  },
   "keywords": [],
   "author": "Adi Aharonov",
   "license": "MIT",
   "description": "A CLI tool to generate best-practice Next.js project templates.",
   "bin": {
-  "generate-client-template": "./index.js"
-},
-"repository": {
-  "type": "git",
-  "url": "https://github.com/AdiAharonov/generate-client-template.git"
-}
+    "generate-client-template": "./index.js"
+  },
+  "repository": "https://github.com/AdiAharonov/generate-client-template.git",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^22.13.5",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "fs-extra": "^11.3.0"
+  }
 }
