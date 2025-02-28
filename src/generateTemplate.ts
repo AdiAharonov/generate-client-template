@@ -1,7 +1,7 @@
 import * as fs from "fs-extra";
 import * as path from "path";
+import chalk from "chalk";
 
-// Generates the template with best-practice structure
 export const generateTemplate = async (
   framework: string,
   templateType: string,
@@ -56,8 +56,8 @@ test("renders ${templateName} component", () => {
     await fs.writeFile(testFile, testContent.trim());
     await fs.writeFile(stylesFile, stylesContent.trim());
 
-    console.log(`✅ Successfully created ${templateType}: ${templateName}`);
+    console.log(chalk.green(`✅ Successfully created ${templateType}: ${templateName} at ${targetDir}`));
   } catch (error) {
-    console.error("❌ Error generating template:", error);
+    console.error(chalk.red("❌ Error generating template:", error));
   }
 };
